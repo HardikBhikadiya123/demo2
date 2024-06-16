@@ -633,9 +633,7 @@ class _AddTaskWidgetState extends State<AddTaskWidget> {
                                                                     BorderRadius
                                                                         .circular(
                                                                             20),
-                                                                side: BorderSide(
-                                                                    width:
-                                                                        1)))),
+                                                            ))),
                                                         icon: Icon(
                                                           Icons.delete,
                                                           color:
