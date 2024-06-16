@@ -13,14 +13,12 @@ import 'package:demo2/Presentation/AddTask/add_task_state.dart';
 import 'package:demo2/Presentation/ManageTask/ManageTaskWidget.dart';
 import 'package:demo2/Presentation/TaskItem/circulureProgressIndicatorWidget.dart';
 import 'package:demo2/componants/appState.dart';
-import 'package:demo2/componants/commanWidget.dart';
 import 'package:demo2/theme/Appcolors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
 import 'package:intl/intl.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class TaskItemWidget extends StatefulWidget {
   final String ItemName;

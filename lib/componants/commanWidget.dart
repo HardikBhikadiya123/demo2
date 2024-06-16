@@ -1,4 +1,3 @@
-import 'package:demo2/theme/Appcolors.dart';
 import 'package:flutter/material.dart';
 
 class CommanWidget{

@@ -1,14 +1,9 @@
 import 'package:bloc/bloc.dart';
-import 'package:demo2/Data/Repositories/TaskRepo.dart';
-import 'package:demo2/Data/data_sources/TaskHiveDataSource.dart';
-import 'package:demo2/Domain/Repositories/TaskRepository.dart';
 import 'package:demo2/Domain/UseCase/add_task.dart';
 import 'package:demo2/Domain/UseCase/delete_task.dart';
 import 'package:demo2/Domain/UseCase/update_tasks.dart';
 import 'package:demo2/Presentation/AddTask/add_task_event.dart';
 import 'package:demo2/Presentation/AddTask/add_task_state.dart';
-import 'package:demo2/Presentation/TaskScreen/TaskScreenWidget.dart';
-import 'package:meta/meta.dart';
 
 class AddTaskBloc extends Bloc<AddTaskEvent, AddTaskState> {
   final AddTask addTask;

@@ -1,5 +1,3 @@
-
-
 import 'package:demo2/Domain/Entities/task.dart';
 
 class TaskModel extends Task {
