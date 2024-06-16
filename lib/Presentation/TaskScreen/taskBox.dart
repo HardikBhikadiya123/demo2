@@ -26,7 +26,7 @@ class _TaskBoxState extends State<TaskBox> {
       child: Container(
         width: double.infinity,
         margin: const EdgeInsetsDirectional.fromSTEB(
-            0, 15, 0, 15),
+            0, 15, 15, 15),
         height: double.infinity,
         decoration: BoxDecoration(
           color: AppColors.SecondaryBackground,

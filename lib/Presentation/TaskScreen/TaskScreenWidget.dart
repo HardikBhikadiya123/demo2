@@ -33,16 +33,19 @@ class _TaskScreenWidgetState extends State<TaskScreenWidget> {
   bool dataload = false;
   List allTasks = [];
 
-  // @override
-  // void dispose() {
-  //   textController.dispose();
-  //   textController.dispose();
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    textController.dispose();
+    textFieldFocusNode.dispose();
+    super.dispose();
+  }
 
   getHivedata() async {
     try {
       hiverecords = await Hive.openBox('tasks');
+      hiverecords?.watch().listen((event) {
+        _loadTasks();
+      });
     } catch (error) {
       print("Error ---->$error");
     }
@@ -51,14 +54,19 @@ class _TaskScreenWidgetState extends State<TaskScreenWidget> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getHivedata();
   }
 
+  _loadTasks() async {
+    if (hiverecords != null) {
+      allTasks = hiverecords!.values.map((e) => TaskModel.fromJson(e)).toList();
+      setState(() {});
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    print("(**********************************************************");
     return Scaffold(
       body: MediaQuery.of(context).size.width > 880 && hiverecords != null
           ? BlocProvider<TaskBloc>(
